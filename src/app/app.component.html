@@ -1,5 +1,17 @@
-<h1>
-  {{title}}
-</h1>
-<hr>
-<app-film-card>Загрузка компонета...</app-film-card>
+<md-toolbar>
+    <button class="toolbar-button" md-mini-fab><md-icon>menu</md-icon></button>
+    <div class="toolbar-button-row">
+        <a md-button *ngFor="let topLink of links">
+            <md-icon>{{topLink.icon}}</md-icon> &nbsp; {{topLink.label}}
+        </a>
+    </div>
+    <span class="example-spacer"></span>
+    <span>Список важных задач</span>
+</md-toolbar>
+
+<md-sidenav-container>
+
+    <div class="app-content">
+        <app-film-card>Загрузка компонета...</app-film-card>
+    </div>
+</md-sidenav-container>

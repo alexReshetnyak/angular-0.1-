@@ -1,13 +1,14 @@
 <form class="example-form">
-  <md-input-container class="example-full-width">
-    <input mdInput placeholder="Название фильма" name="filmName" [(ngModel)] = "filmName" (keyup.enter)="getFilms()">
-  </md-input-container>
+    <md-input-container class="example-full-width">
+        <input mdInput placeholder="Название фильма" name="filmName" [(ngModel)]="filmName" (keyup.enter)="getFilms()">
+    </md-input-container>
 </form>
 
-<md-grid-list cols="3" rowHeight="800px">
+<md-grid-list cols="2" rowHeight="800px">
 
     <md-grid-tile *ngFor="let film of filmList" class="navigation">
         <md-card class="film-card">
+            <md-card-content class="helper"></md-card-content>
             <img md-card-image *ngIf="film.Poster != 'N/A'" src="{{film.Poster}}">
             <md-card-content>
                 <md-card-title>{{film.Title}}</md-card-title>
@@ -17,7 +18,7 @@
             <md-card-actions>
                 <button md-button>Подробнее..</button>
             </md-card-actions>
-        </md-card> 
+        </md-card>
     </md-grid-tile>
 
 </md-grid-list>

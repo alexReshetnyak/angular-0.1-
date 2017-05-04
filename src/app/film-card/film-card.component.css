@@ -1,13 +1,15 @@
 .film-card {
-  max-width: 300px;
-  margin-left:50px;
+    width: 300px;
+    margin-left: 50px;
+    height: 800px;
+    margin-bottom: 190px;
 }
 
-.app-content{
-  margin: 50px auto;
-  max-width: 884px;
+.example-form {
+    margin-bottom: 50px;
 }
 
-.example-form{
-  margin-bottom: 50px;
+.helper {
+    width: 100%;
+    height: 80px;
 }
