@@ -3,28 +3,28 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import {MaterialModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MaterialModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { ProductCarComponent } from './product-car/product-car.component';
 import { FilmCardComponent } from './film-card/film-card.component';
-import { FilmCardService } from './film-card/film-card.service';
+import { FilmService } from './film.service';
+import { FilmListComponent } from './film-list/film-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductCarComponent,
-    FilmCardComponent
+    FilmCardComponent,
+    FilmListComponent
   ],
   imports: [
-    MaterialModule,
     BrowserAnimationsModule,
+    MaterialModule,
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [FilmCardService], //сервисы
+  providers: [FilmService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

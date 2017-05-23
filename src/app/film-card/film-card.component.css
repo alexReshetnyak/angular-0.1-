@@ -1,15 +1,20 @@
-.film-card {
-    width: 300px;
-    margin-left: 50px;
-    height: 800px;
-    margin-bottom: 190px;
-}
 
+.film-card {
+  width: 300px;
+  height: 750px;
+  margin-bottom: 50px; 
+  text-align: center;
+}
+/*
 .example-form {
     margin-bottom: 50px;
+}*/
+.film-card-image{
+   background-size: contain;
+   height: 400px;
+   width: auto;
 }
 
-.helper {
-    width: 100%;
-    height: 80px;
+.card-content{
+  text-align: left;
 }

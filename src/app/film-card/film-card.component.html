@@ -1,24 +1,15 @@
-<form class="example-form">
-    <md-input-container class="example-full-width">
-        <input mdInput placeholder="Название фильма" name="filmName" [(ngModel)]="filmName" (keyup.enter)="getFilms()">
-    </md-input-container>
-</form>
 
-<md-grid-list cols="2" rowHeight="800px">
+		<md-card class="film-card">
+			<img class="film-card-image" md-card-image src="{{filmItem.Poster}}">
+			<md-card-content class="card-content">
+				<md-card-title>{{filmItem.Title}}</md-card-title>
+				<p>Релиз: {{filmItem.Released}}. Страна: {{filmItem.Country}}</p>
+				<p>{{filmItem.Plot}}</p>
+				<p>Актеры: {{filmItem.Actors}}</p>
+			</md-card-content>
+			<md-card-actions>
+				<button md-button>Подробнее</button>
+			</md-card-actions>
+		</md-card>
 
-    <md-grid-tile *ngFor="let film of filmList" class="navigation">
-        <md-card class="film-card">
-            <md-card-content class="helper"></md-card-content>
-            <img md-card-image *ngIf="film.Poster != 'N/A'" src="{{film.Poster}}">
-            <md-card-content>
-                <md-card-title>{{film.Title}}</md-card-title>
-                <p>Год: {{film.Year}}</p>
-                <p>{{film.Title}}</p>
-            </md-card-content>
-            <md-card-actions>
-                <button md-button>Подробнее..</button>
-            </md-card-actions>
-        </md-card>
-    </md-grid-tile>
 
-</md-grid-list>

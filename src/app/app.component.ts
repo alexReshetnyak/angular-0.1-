@@ -5,13 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
-  title = 'app works!';
-  src = 'https://plnkr.co/edit/1eawJZ4eJ4KfUDxBMr1D?p=preview';
-  links: Object[] = [
-        { path: '/dashboard', icon: 'home', label: 'Главная'},
-        { path: '/task', icon: 'event_name', label: 'Задачи'},
-        { path: '/statistics', icon: 'settings', label: 'Статистика'}
-    ];
+  title: string = 'Каталог фильмов JSExpert';
+
+  links = [
+    { path: '/dashboard', icon: 'home', label: 'Главная'},
+    { path: '/filmList', icon: 'theaters', label: 'Все фильмы'},
+    { path: '/profile', icon: 'person', label: 'Профиль'}
+  ];
+
 }
