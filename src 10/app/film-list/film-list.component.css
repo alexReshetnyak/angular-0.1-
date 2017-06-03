@@ -1,0 +1,17 @@
+.app-content {
+   margin: 50px auto; 
+   max-width: 884px;
+}
+
+.nofilm{
+    margin-left: 30px;
+    font-size: 18px;
+    color: grey;
+}
+
+.form-select{
+    margin:0 0 30px 35px;;
+}
+.button-row{
+    text-align: center;
+}

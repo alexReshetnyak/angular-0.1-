@@ -1,0 +1,33 @@
+
+<div  *ngIf="view === 1; else elseBlock">	
+	<md-card class="film-card">
+		<img class="film-card-image" md-card-image src="{{filmItem.Poster}}">
+		<md-card-content class="card-content">
+			<md-card-title>{{filmItem.Title}}</md-card-title>
+			<p>Релиз: {{filmItem.Released}}. Страна: {{filmItem.Country}}</p>
+			<p>{{filmItem.Plot}}</p>
+			<p>Актеры: {{filmItem.Actors}}</p>
+		</md-card-content>
+		<md-card-actions>
+			<button md-button>Подробнее</button>
+		</md-card-actions>
+	</md-card>
+</div>
+
+<ng-template #elseBlock>
+	<md-card class="film-card-2">
+		<div class="flex-wrapper">
+			<img class="film-card-image-2" md-card-image src="{{filmItem.Poster}}">
+			<md-card-content class="card-content-2">
+				<md-card-title>{{filmItem.Title}}</md-card-title>
+				<p>Релиз: {{filmItem.Released}}. Страна: {{filmItem.Country}}</p>
+				<p>{{filmItem.Plot}}</p>
+				<p>Актеры: {{filmItem.Actors}}</p>
+			</md-card-content>
+		</div>
+		<md-card-actions id='button-container1'>
+			<button md-button>Подробнее</button>
+		</md-card-actions>
+	</md-card>
+</ng-template>
+
