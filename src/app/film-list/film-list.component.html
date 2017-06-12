@@ -1,0 +1,29 @@
+<form [ngClass]="'form-select'">
+	<md-select placeholder="Вид" [(ngModel)]="selectedValue" name="food">
+		<md-option [value]="1">
+			Вариант 1
+		</md-option>
+		<md-option [value]="2">
+			Вариант 2
+		</md-option>
+	</md-select>
+</form>
+
+<md-grid-list cols="2" [rowHeight]="getHeight()">
+
+	<div  *ngIf="filmList[0]; else elseBlock">
+		<md-grid-tile *ngFor="let film of filmList">
+			<film-card [filmId]="film.imdbID" [view]="selectedValue"></film-card>
+		</md-grid-tile>
+	</div>
+
+  	<ng-template #elseBlock>
+		<h1 [ngClass]="'nofilm'" >"Простите, ничего не найдено"</h1>
+	</ng-template>
+
+	
+</md-grid-list>
+<div [ngClass] = "{'loader': true, 'loader-hide': hideLoader}"><img src="http://tsp-shop.ru/bitrix/templates/tsp_template/img/loading.gif"></div>
+<div class="button-row">
+	<button md-button (click)="getMoreFilms()">Больше фильмов</button>
+</div>

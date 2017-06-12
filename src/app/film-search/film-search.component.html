@@ -1,0 +1,15 @@
+<md-input-container class="example-full-width select-film">
+    <input  mdInput placeholder="Введите название фильма"
+            [mdAutocomplete]="auto"
+            [(ngModel)]='filmName'
+            (keyup)="autoFilms()"
+            (blur)='searchFilms()'
+    >
+</md-input-container>
+
+<md-autocomplete #auto="mdAutocomplete">
+  <md-option *ngFor="let state of filmNames" [value]="state" >
+    {{ state }}
+  </md-option>
+</md-autocomplete>
+
