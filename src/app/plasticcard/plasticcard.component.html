@@ -1,0 +1,140 @@
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+<h4>Заполните свои реквезиты</h4>
+  <form  class="form-inline" #cardForm = "ngForm">
+    <div class="inputs-wrap">
+      <div class="form-group form-group-custom">
+        <label for="phone">номер мобильного телефона</label><br>
+        <input  type="text"
+                required
+                class="form-control"
+                [(ngModel)]="form.phone"
+                id="phone"
+                #userPhone="ngModel"
+                pattern="[+]?[0-9]{10,12}"
+                name="userPhone">
+
+        <div [hidden]="userPhone.valid || userPhone.untouched" class="error">
+                Укажите правильно номер мелефона
+        </div>
+      </div><br>
+        
+      <div class="form-group form-group-custom">
+        <label for="money">Сумма пополнения в гривнах</label><br>
+        <input  type="text"
+                required
+                class="form-control"
+                [(ngModel)]="form.money"
+                id="money"
+                pattern="[0-9]{1,}"
+                #userMoney="ngModel"
+                name="userMoney">
+
+        <div [hidden]="userMoney.valid || userMoney.untouched" class="error">
+                Должны быть только цыфры
+        </div>
+      </div>
+      <br>
+
+      <div class="form-group form-group-custom">
+        <label for="email">Адресс электронной почты</label><br>
+        <input  type="email"
+                required
+                class="form-control"
+                [(ngModel)]="form.email"
+                id="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                #userEmail="ngModel"
+                name="userEmail">
+        <div [hidden]="userEmail.valid || userEmail.untouched" class="error">
+                      Неправильно указана почта
+        </div>
+      </div><br>
+    </div>
+      
+    <div class="golden-card form-group">
+      <h1>Данные платежной карты </h1>
+      <label for="cardNumber" class="label-card-number">Номер платежной карты:</label><br>
+      <input  type="text"
+              required
+              class="form-control"
+              [(ngModel)]="form.cardNumber"
+              [ngStyle]="{'border-color': (userCardNumber.invalid && userCardNumber.dirty)?'red':''}"
+              id="cardNumber"
+              pattern="[0-9]{13,16}"
+              #userCardNumber="ngModel"
+              name="cardNumber">
+      <label for="cardDate" class="label-card-date">Срок действия: <span>(ММ/ГГ)</span></label>
+      <select 
+              required
+              class="form-control"
+              [(ngModel)]="form.cardDateMonth"
+              id="cardDateMonth"
+              #userCardDateMonthr="ngModel"
+              name="cardDateMonth">
+        <option value="_ _" selected>_ _</option>
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      
+      <select 
+              required
+              class="form-control"
+              [(ngModel)]="form.cardDateYear"
+              id="cardDateYear"
+              #userCardDateMonthr="ngModel"
+              name="cardDateYear">
+        <option value="_ _ _ _" selected>_ _ _ _</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+      </select>
+    </div>
+
+    <div class="silver-card form-group">
+      <label for="cardCVV" class="label-card-cvv">СVV код: </label>
+      <input  type="text"
+              required
+              class="form-control"
+              [(ngModel)]="form.cardCVV"
+              id="cardCVV"
+              pattern="[0-9]{3,3}"
+              #userCardCVV="ngModel"
+              [ngStyle]="{'border': (userCardCVV.invalid && userCardCVV.dirty)?'1px solid red':''}"
+              name="cardCVV">
+    </div><br>
+            
+    <br><br><br>
+    <a routerLink="/card">
+      <button type="submit"
+              class="btn btn-default"
+              (click)="createTask()"
+              [disabled] = "!cardForm.form.valid">Пополнить
+      </button>
+    </a>
+  </form>
+  <div class="thankyou" *ngIf="formSubmit">
+    Спасибо! Деньги перечисленны
+  </div>
+</div>
