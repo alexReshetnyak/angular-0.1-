@@ -1,0 +1,35 @@
+<div class="container">
+  <br>
+  <br>
+  <br> 
+  <br>
+  <br>
+  <h1>Вход</h1>
+  <form  class="form-inline" [formGroup] = "loginForm">
+    <div class="form-group">
+      <label for="email">Имя пользователя или адресс электронной почты</label><br>
+      <input  type="email" formControlName = "name">
+        <div *ngIf="formErrors.name" class="error">
+                {{formErrors.name}}
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="pass">Пароль</label><br>
+      <input  type="password" formControlName = "password">
+        <div *ngIf="formErrors.password" class="error">
+                {{formErrors.password}}
+        </div>
+    </div>
+    <br><br><br>
+      <button type="submit"
+              class="btn btn-default"    
+              (click)="createTask()"
+              [disabled] = "formValid === 'INVALID'"> Войти
+      </button>
+  </form>
+    <br>
+    <div class="error" [hidden]="status">
+      Логин и пароль не верный
+    </div>
+</div>

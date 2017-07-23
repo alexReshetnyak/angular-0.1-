@@ -1,0 +1,102 @@
+.inputs-wrap{
+  padding: 0 0 20px 10px;
+}
+.golden-card{
+  display: inline-block;
+  width: 500px;
+  height: 320px;
+  background: url("../../images/goldcard.png") no-repeat;
+  background-size: contain;
+}
+
+.golden-card>h1{
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.label-card-number{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 10px 20px;
+}
+
+#cardNumber{
+  width: 460px;
+  height: 40px;
+  background: #FFE18B;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 0 20px 20px;
+}
+
+.label-card-date{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 0 0px 20px;
+}
+
+.label-card-date>span{
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#cardDateMonth{
+  background: url("../../images/selectArrow2.png") no-repeat;
+  background-position: 55px 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 40px;
+  background-color: #FFE18B;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+#cardDateYear{
+  background: url("../../images/selectArrow2.png") no-repeat;
+  background-position: 75px 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 40px;
+  background-color: #FFE18B;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.silver-card{
+  display: inline-block;
+  width: 500px;
+  height: 305px;
+  background: url("../../images/silvercard.png") no-repeat;
+  background-size: contain;
+  padding-top: 120px;
+}
+
+.label-card-cvv{
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 10px 120px;
+}
+
+#cardCVV{
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border: unset;
+  margin-left: 20px;
+}
+
+.form-group-custom{
+  min-height: 80px;
+}
