@@ -1,0 +1,45 @@
+.actors-wrap{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .actors-wrap {
+      justify-content: center;
+    } 
+}
+
+@media (max-width: 992px) {
+    .actors-wrap {
+      justify-content: space-around;
+    } 
+}
+
+.actor-wrap{
+  padding: 0;
+  float: none;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: 0 0 5px 0 rgba(0,0,0, 0.2);
+}
+
+@media(max-width: 768px){
+  .actor-wrap{
+    max-width: 300px;
+  }
+}
+
+.img{
+  min-width: 100%;
+  min-height: 200px;
+}
+
+.actor-name{
+  padding: 10px 10px 0;
+  font-weight: 700;
+}
+.actor-character{
+  padding: 0px 10px 10px;
+}

@@ -1,0 +1,32 @@
+<div class="col-lg-12 film-background"
+    [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w1280/'+ filmItem.backdrop_path + ')'}">
+
+    <div class="wrap-blue">
+        <div class="container">
+            <div class="spacer"></div>
+            <div class="poster-film-wrap  col-md-4 col-xs-12">
+                <img width="300" src='https://image.tmdb.org/t/p/w342/{{filmItem.poster_path}}' />
+            </div
+            ><div class="film-info-wrap col-md-8 col-xs-12">
+                <div class="wrap-film-title">
+                    <h1 class="film-title">
+                        {{filmItem.title}} <span class="film-year">({{filmItem.year}})</span>
+                    </h1>
+                    <div></div>
+                    <div class="users-rating">
+                        <rating-cmp [rating] = 'filmItem.vote_average' ></rating-cmp>
+                        <div class="film-star-wrap" (click) = 'changeFilmStatus()'>
+                            <div class="film-star" [ngClass]="{'film-star-added': filmAddedStatus}"></div>
+                        </div>
+                    </div>
+                    <h3 class="film-overview-title">Обзор</h3>
+                    <div class="film-overview text-left">{{filmItem.overview}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h3 class="film-main-rols">В главных ролях </h3>
+    <actors-cmp [id] = 'id'></actors-cmp>
+</div>

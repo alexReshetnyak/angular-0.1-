@@ -1,0 +1,7 @@
+<div class="actors-wrap">
+  <div class="actor-wrap col-md-2 col-sm-5 col-xs-7" *ngFor="let actor of actors" >
+    <img class="img" src="https://image.tmdb.org/t/p/w154/{{actor.profile_path}}">
+    <div class="actor-name">{{actor.name}}</div>
+    <div class="actor-character">{{actor.character}}</div>
+  </div>
+</div>

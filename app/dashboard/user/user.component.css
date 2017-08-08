@@ -1,0 +1,46 @@
+.wrap-for-films{
+    float: none;
+    margin: auto;
+}
+
+.card-avatar-manual{
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border-radius: 0;
+}
+
+.img{
+    min-height: 700px;
+    min-width: 100%;
+}
+.img-wrap{
+    height: 700px;
+    display: inline-block;
+    width: 100%;
+}
+.card-title-film{
+    height: 35px;
+}
+.card-content-film{
+    height: 145px;
+    overflow: hidden;
+    text-align: left;
+    color: rgba(0,0,0, 0.7);
+}
+
+.loader-custom{
+    position: unset;
+    margin: 60px auto 0;
+}
+
+.loader-hide{
+    display: none;
+}
+
+.button-row{
+    text-align: center;
+}
+.btn-get-more{
+    border-radius: 20px;
+}

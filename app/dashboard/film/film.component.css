@@ -1,0 +1,132 @@
+.film-background{
+    min-height: 650px;
+    background-size: cover;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.wrap-blue{
+    background: rgba(0, 13, 0, 0.8);
+    min-height: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.spacer{
+    height: 70px;
+}
+
+.poster-film-wrap{
+    min-width: 100px;
+    min-height: 200px;
+    float: none;
+    display: inline-block;
+    padding: 0;
+    margin-top: 30px;
+    vertical-align: top;
+}
+@media (min-width: 991px) {
+    .poster-film-wrap {
+        text-align: left;
+    } 
+}
+
+.film-info-wrap{
+    min-width: 100px;
+    min-height: 200px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media (min-width: 991px) {
+    .film-info-wrap {
+        text-align: left;
+    } 
+}
+
+.film-title{
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.film-year{
+    color:rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.users-rating{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .users-rating {
+        justify-content: center;
+    } 
+}
+
+rating-cmp{
+    height: 62px;
+}
+
+.film-star-wrap{
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    margin-left: 20px;
+}
+
+.film-star-wrap:hover{
+    background: #1E272C;
+    border-color: rgba(30,49,24,0.6);
+}
+
+.film-star{
+    width: 100%;
+    height: 100%;
+    background: url('../../../assets/img/starwhite.png') no-repeat;
+    background-size: 40%;
+    background-position: 50% 50%; 
+}
+
+.film-star-added{
+    background-image: url('../../../assets/img/staryellow.png');
+}
+
+.film-overview-title{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.film-overview{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.film-main-rols{
+    margin-left: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0px 0 30px 0;
+    color: rgba(0,0,0, 0.8);
+}
+
+@media (min-width: 991px) {
+    .film-main-rols {
+        text-align: left;
+    } 
+}

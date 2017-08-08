@@ -1,0 +1,16 @@
+<div class="progress blue">
+  <span class="progress-left">
+      <span   class="progress-bar"
+              [ngStyle]="{'transform': 'rotate(' + leftProgressDeg + 'deg)',
+                          'border-color': colorProgress}">
+      </span>
+  </span>
+  <span class="progress-right">
+      <span   class="progress-bar"
+              [ngStyle]="{'transform': 'rotate(' + rightProgressDeg + 'deg)',
+                          'border-color': colorProgress}">
+      </span>
+  </span>
+  <div class="progress-value">{{rating*10}}%</div>
+</div>
+<div class="users-rating-text">Рейтинг пользователей</div>

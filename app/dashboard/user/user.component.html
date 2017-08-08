@@ -1,0 +1,35 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-lg-10 wrap-for-films" *ngFor="let film of filmList; let i = index">
+                
+                <div class="col-md-6">
+                    <div class="card card-profile">
+                        <div class="card-avatar card-avatar-manual">
+                            <a routerLink="/film/{{film.id}}" class="img-wrap">
+                                <img class="img" src="https://image.tmdb.org/t/p/w500/{{film.poster_path}}"/>
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="category text-gray">{{film.release_date}}</h6>
+                            <h4 class="card-title card-title-film">{{film.title}}</h4>
+                            <p class="card-content card-content-film">
+                                {{film.overview}}
+                            </p>
+                            <a routerLink="/film/{{film.id}}" class="btn btn-danger btn-round">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div [ngClass] = "{'loader': true, 'loader-custom': true, 'loader-hide': hideLoader}">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+    <div class="button-row">
+            <button class="btn btn-danger btn-get-more" (click)="getMoreFilms()">Больше фильмов</button>
+    </div>
+</div>
