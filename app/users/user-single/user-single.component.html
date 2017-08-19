@@ -1,0 +1,16 @@
+<div *ngIf="film">
+  
+  <h2>{{ film.title }}</h2>
+  <div>{{ film.overview }}</div>
+  <br>
+  <img src="https://image.tmdb.org/t/p/w500/{{film.poster}}" class="img-rounded">
+
+  <div>
+    <br>
+    <a *ngIf="userRole === 'admin'" [routerLink]="['/users', film.id, 'edit']" class="btn btn-primary btn-sm">Редактировать</a>
+    <a *ngIf="userRole === 'admin'" (click)="deleteFilm()" class="btn btn-danger btn-sm">Удалить</a>
+
+    <a [routerLink]="['/users', film.id + 1]" class="btn btn-default btn-sm">Далее</a>
+  </div>
+
+</div>
