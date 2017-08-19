@@ -1,3 +1,3 @@
-# Angular 2 HTTP and Services
+# Angular 2 Routes
 
-Это Небольшое приложение, которое показывает работу HTTP и Сервисов в Anguar 2+
+Это Небольшое приложение, которое показывает работу Router в Anguar 2+
