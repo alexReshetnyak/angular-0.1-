@@ -1,0 +1,28 @@
+<div *ngIf="user">
+  
+  <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+  <form (ngSubmit)="createUser()">
+
+    <div class="form-group">
+      <label>Имя</label>
+      <input type="text" class="form-control" name="name" required [(ngModel)]="user.name">
+    </div>
+
+    <div class="form-group">
+      <label>Логин</label>
+      <input type="text" class="form-control" name="last_name" required [(ngModel)]="user.last_name">
+    </div>
+
+    <div class="form-group">
+      <label>Аватар</label>
+      <input type="text" class="form-control" name="avatar" required [(ngModel)]="user.avatar">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Создать пользователя</button>
+
+  </form>
+
+</div>
